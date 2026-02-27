@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Expense Tracker</h1>
+
+    <!-- Add Expense Form -->
+    <div class="card">
+        <h2>Add Expense</h2>
+        <form id="expenseForm">
+            <input type="text" id="title" placeholder="Title" required>
+            <input type="number" id="amount" placeholder="Amount" required>
+            <input type="text" id="category" placeholder="Category" required>
+            <input type="date" id="date" required>
+            <button type="submit">Add Expense</button>
+        </form>
+    </div>
+
+    <!-- Filters -->
+    <div class="card">
+        <h2>Filters</h2>
+
+        <div class="filter-group">
+            <input type="text" id="filterCategory" placeholder="Filter by Category">
+            <button onclick="filterByCategory()">Filter</button>
+        </div>
+
+        <div class="filter-group">
+            <input type="date" id="startDate">
+            <input type="date" id="endDate">
+            <button onclick="filterByDate()">Filter by Date</button>
+        </div>
+
+        <button class="secondary" onclick="loadExpenses()">Reset</button>
+    </div>
+
+    <!-- Total -->
+    <div class="card total-card">
+        <h2>Total Expenses</h2>
+        <p id="totalAmount">GHS 0.00</p>
+    </div>
+
+    <!-- Expense List -->
+    <div class="card">
+        <h2>All Expenses</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Amount</th>
+                    <th>Category</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="expenseList"></tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
