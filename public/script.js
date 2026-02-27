@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000/api/expenses";
+const API_URL = "https://expense-tracker-1-oi2p.onrender.com/api/expenses";
 
 /* -------------------- LOAD ALL -------------------- */
 async function loadExpenses() {
